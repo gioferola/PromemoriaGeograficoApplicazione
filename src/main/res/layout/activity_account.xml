@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogIn"
+    android:background="#c6c6c6">
+
+    <TextView
+        android:id="@+id/infoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info"
+        android:textSize="32dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/infoIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/infoTxt"
+        android:layout_alignBottom="@+id/infoTxt"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icon_user_black"/>
+    <LinearLayout
+        android:id="@+id/nomeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/infoTxt"
+        android:gravity="right">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+        <TextView
+            android:id="@+id/nomeTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:textAlignment="center"
+            android:textSize="26dp"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/cognomeTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cognome"
+            android:textAlignment="center"
+            android:textSize="26dp"
+            android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/btnCambiaNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="Cambia"
+            android:backgroundTint="#f9aa33"
+            android:textColor="#000"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/emailTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/nomeLayout"/>
+
+    <ImageView
+        android:id="@+id/emailTxtIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/emailTxt"
+        android:layout_alignBottom="@+id/emailTxt"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icon_email"/>
+    <LinearLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/emailTxt"
+        android:gravity="right">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+        <TextView
+            android:id="@+id/emailCampoTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textAlignment="center"
+            android:textSize="26dp"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/passwordTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/emailLayout"/>
+
+    <ImageView
+        android:id="@+id/passwordTxtIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/passwordTxt"
+        android:layout_alignBottom="@+id/passwordTxt"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icon_password"/>
+    <LinearLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/passwordTxt"
+        android:gravity="right">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+        <TextView
+            android:id="@+id/passwordCampoTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textSize="26dp"
+            android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/btnCambiaPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="Cambia"
+            android:backgroundTint="#f9aa33"
+            android:textColor="#000"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

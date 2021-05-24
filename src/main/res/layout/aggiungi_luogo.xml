@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popUp"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="600dp"
+    android:padding="5dp"
+    android:layout_gravity="center"
+    android:background="@drawable/background_popup"
+    android:backgroundTint="#5f7481">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/icon_close"
+        android:layout_gravity="right"
+        />
+
+
+    <EditText
+        android:id="@+id/editNomeLuogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint="Nome"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
+
+    <FrameLayout
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="260dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        tools:context=".AggiungiLuogo"
+        android:layout_gravity="center">
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sv_location"
+            map:queryHint="Search..."
+            map:iconifiedByDefault="false"
+            android:layout_margin="5dp"
+            android:elevation="5dp"
+            android:background="@drawable/background_popup"
+            android:backgroundTint="#f9aa33"
+            />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            map:srcCompat="@drawable/icons_full_sreen"
+            android:layout_gravity="right|bottom"
+            android:elevation="5dp"/>
+
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distanza di notifica:"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/raggioNotifica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:valueFrom="0.5"
+        android:valueTo="20"
+        android:value="10"
+        map:trackColorActive="#f9aa33"
+        map:trackColorInactive="#57F9AA33"
+        map:thumbColor="#f9aa33"
+        map:haloColor="#f9aa33"
+        map:labelStyle="@style/Widget.App.Tooltip"
+        android:layout_gravity="center"/>
+
+
+    <EditText
+        android:id="@+id/editDescrizione"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:hint="descrizione"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <Button
+        android:id="@+id/aggiungiLuogoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aggiungi"
+        android:backgroundTint="#f9aa33"
+        android:textColor="#000"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
