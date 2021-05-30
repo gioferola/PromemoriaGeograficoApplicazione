@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Promemoria Geografico</string>
+    <string name="title_activity_sing_up">SingUp</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_home_page">Map</string>
+</resources>
